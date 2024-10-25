@@ -29,8 +29,8 @@ jobs:
       - name: Import data
         run: Rscript -e 'source("import_data.R")'
         env:
-          MY_TOKEN: ${{ secrets.MY_TOKEN_GHA }}
-          MY_UID: ${{ secrets.MY_UID_GHA }}
+          TOKEN: ${{ secrets.MY_TOKEN_GHA }}
+          UID: ${{ secrets.MY_UID_GHA }}
 
 
       - name: Commit results
