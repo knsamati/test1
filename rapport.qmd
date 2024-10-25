@@ -1,0 +1,34 @@
+---
+title: "rapport"
+format: pdf
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(labelled)
+library(gt)
+
+df <- read_rds("mydf.rds")
+
+df <-  df |> 
+  clean_names() |> 
+  remove_labels() |> 
+  select(3:4)
+
+
+
+df |> 
+  gt()
+
+```
+
